@@ -3,11 +3,11 @@ import tweepy
 import random
 
 
-consumer_key = 'zc5f5LIwKCwcit5jn7G61HUca'
-consumer_secret = 'GsMJ7pgPuhESAp2XC1pRvsXn2MtqNdOFVbBr9tOI7MNUiTeQud'
+consumer_key = 'rwUd61NPZh6yrIcmbQpQH60zR'
+consumer_secret = 'WKQfEY8qhJc9OuBSmK1wVHyFspnfFl52Cf0b5mxTbxrtIAmGmS'
 
-key = '1365410449664208904-O52PkPj6mHfNPmUgZZFwNlKJxCYKMJ'
-secret = 'sqVEqF6kvwDxjQifIrB6CBH4bDfBNreb5xjehGMqBeWz0'
+key = '1365469304502812675-DwHAmh0ehliTmcOzjLgvCsPVgrK5H0'
+secret = 'o4Sn7tHVkD3HodU6dQSTOkCgqpNhLgxdgnFFQsRXvnfRi'
 
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -24,13 +24,13 @@ api = tweepy.API(auth)
 
 def tweetsend2():
     print("oi")
-    public_tweets = api.search(q='bts -filter:retweets', count=1, geocode="-11.800399,-48.339055,1800km", since="2018-06-09", tweet_mode="extended")
+    public_tweets = api.search(q='jimin -filter:retweets', count=1, geocode="-11.800399,-48.339055,2500km", since="2018-06-09", tweet_mode="extended")
     for tweet in public_tweets:
         print(tweet.full_text)
         print(tweet.user.screen_name)
         print(tweet.user.id)
         recipient_id = tweet.user.id
-        text = "Oiii, você poderia por favor dar um olhada no meu fixado? Eu to passando por umas situações meio dificeis, e em 30 segundos você poderia me ajudar sem gastar nada, por favor, eu realmente preciso"
+        text = "Oiiie, você podia por favor ver no meu fixado? Eu to em uma situação complicada de dinheiro, e em uns 30 segundos você poderia me ajudar sem gastar nada, por favor, eu realmente preciso"
         try:
             number = ('1',
             '2',
@@ -39,8 +39,8 @@ def tweetsend2():
             )
             numberident = (random.choice(number))
             print(numberident)
-            api.send_direct_message(recipient_id, text)
             numberchance = "2" in numberident
+            api.send_direct_message(recipient_id, text)
             if numberchance == True:
                 try:
                     api.create_friendship(tweet.user.id)
