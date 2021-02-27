@@ -1,11 +1,8 @@
 tweepy
 mysql-connector
-pyrebase4
-opencv-python== 4.5.1.48
-urllib3
-pillow
-numpy
-pyrebase4
+
+
+
 
 
 
