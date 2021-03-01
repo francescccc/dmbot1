@@ -24,7 +24,7 @@ api = tweepy.API(auth)
 
 def tweetsend2():
     print("oi")
-    public_tweets = api.search(q='jimin -filter:retweets', count=1, geocode="-11.800399,-48.339055,2500km", since="2018-06-09", tweet_mode="extended")
+    public_tweets = api.search(q='jimin -filter:retweets', count=1, geocode="-11.800399,-48.339055,900km", since="2018-06-09", tweet_mode="extended")
     for tweet in public_tweets:
         print(tweet.full_text)
         print(tweet.user.screen_name)
