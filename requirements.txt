@@ -1,5 +1,8 @@
 tweepy
 mysql-connector
+Pillow
+urllib3
+pyrebase4
 
 
 
