@@ -133,7 +133,7 @@ def reply():
                 media_files = set()
                 media = status.entities.get('media', [])
                 print(status.user.screen_name)
-                twitterbot = "bolsobot_" in status.user.screen_name
+                twitterbot = "Bolsobot_" in status.user.screen_name
                 twitterbot2 = "distortbott" in status.user.screen_name
                 print(twitterbot, twitterbot2)
                 if twitterbot == True:
